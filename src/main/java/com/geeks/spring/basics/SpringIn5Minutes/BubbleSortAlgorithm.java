@@ -1,8 +1,10 @@
 package com.geeks.spring.basics.SpringIn5Minutes;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
+@Qualifier("bubble")
 public class BubbleSortAlgorithm implements SortingAlgorithm{
 
 	@Override

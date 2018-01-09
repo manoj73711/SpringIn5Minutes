@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.geeks.spring.basics.SpringIn5Minutes.basic.SortingAlgorithmImpl;
+
 @SpringBootApplication
 public class SpringIn5MinutesApplication {
 

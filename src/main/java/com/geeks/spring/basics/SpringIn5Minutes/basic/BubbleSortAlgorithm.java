@@ -1,4 +1,4 @@
-package com.geeks.spring.basics.SpringIn5Minutes;
+package com.geeks.spring.basics.SpringIn5Minutes.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

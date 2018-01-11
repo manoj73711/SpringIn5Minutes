@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class SortingAlgorithmImpl {
 	
 @Autowired	
-@Qualifier("quick")
+@Qualifier("bubble")
 SortingAlgorithm sortAlgorithm;	
 public int findElementInArray(int[ ] b ,int a) {
 	

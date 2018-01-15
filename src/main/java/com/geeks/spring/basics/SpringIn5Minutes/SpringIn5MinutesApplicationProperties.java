@@ -1,11 +1,16 @@
 package com.geeks.spring.basics.SpringIn5Minutes;
 
+import org.slf4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import com.geeks.spring.basics.SpringIn5Minutes.basic.SortingAlgorithmImpl;
+import com.geeks.spring.basics.SpringIn5Minutes.propertyFile.PropertyLoader;
+
+import ch.qos.logback.core.Context;
 
 /*//This annotation is for spring boot
 @SpringBootApplication
@@ -13,16 +18,15 @@ import com.geeks.spring.basics.SpringIn5Minutes.basic.SortingAlgorithmImpl;
 //This is for the spring application without boot
 @Configuration
 @ComponentScan
-public class SpringIn5MinutesApplication {
+//@PropertySource("classpath:url.properties")
+public class SpringIn5MinutesApplicationProperties {
 
 	public static void main(String[] args) {
-		//ApplicationContext context=SpringApplication.run(SpringIn5MinutesApplication.class, args);
-		ApplicationContext context=new AnnotationConfigApplicationContext(SpringIn5MinutesApplication.class);
-		SortingAlgorithmImpl impl=context.getBean(SortingAlgorithmImpl.class);
-		SortingAlgorithmImpl impl1=context.getBean(SortingAlgorithmImpl.class);
-		System.out.println(impl);
-		System.out.println(impl1);
-		System.out.println("Hey here is the output: "+impl.findElementInArray(new int[] {2,3,4},5));
-	
+		
+		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(SpringIn5MinutesApplicationProperties.class);
+		PropertyLoader propertyLoader=context.getBean(PropertyLoader.class);
+		System.out.println(propertyLoader.getHomeURL());
+		
 	}
 }
+
